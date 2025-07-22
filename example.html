@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RFID Parameters Reader</title>
+  <style>
+    body {
+      font-family: Inter, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #EEEEEE;
+    }
+
+    header {
+      position: relative; 
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 20px 30px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header-left {
+      display: flex;
+      flex-direction: column;
+      padding-left: 250px; 
+    }
+
+    h1 {
+      margin: 0;
+      color: #000000;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 40px;
+    }
+
+    #refreshButton {
+      margin-top: 10px;
+      background-color: #295DEA;
+      border: 2px solid #295DEA;
+      color: white;
+      width: 140px;
+      height: 40px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #refreshButton:hover {
+      background-color: #1f4bb0;
+    }
+
+    .logo {
+      position: absolute;
+      top: 34px;
+      right: 280px;
+      margin: 0;
+    }
+
+    .logo img {
+      height: 73px;
+      width: 110px;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 6px;
+      padding: 25px 30px 35px 30px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .field-group {
+      margin-bottom: 30px;
+      margin-left: 50px;
+      margin-right: 50px;
+      
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 12px;
+      display: block;
+      margin-bottom: 6px;
+      color: #868686;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #B3B3B3;
+      border-radius: 5px;
+      background-color: #FFFFFF;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) 
+    {
+      header {
+        flex-direction: column;
+        padding: 20px;
+        align-items: flex-start;
+      }
+
+      .header-left {
+        padding-left: 0;
+      }
+
+      .logo {
+        position: static;
+        margin-top: 10px;
+        align-self: flex-end;
+      }
+
+      .logo img {
+        width: 90px;
+        height: auto;
+      }
+
+      #refreshButton {
+        width: 100%;
+      }
+
+      .container {
+        width: 90%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <h1>RFID Parameters Reader</h1>
+      <button id="refreshButton" onclick="location.reload();">Refresh</button>
+    </div>
+    <div class="logo">
+      <img src="OFFSQ_Logo.png" alt="OFFSQUARE Logo">
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="field-group">
+      <label for="timestamp">Time Stamp</label>
+      <input type="text" id="timestamp" value="2025-07-07 12:00:00" readonly>
+    </div>
+    <div class="field-group">
+      <label for="location">Location</label>
+      <input type="text" id="location" value="QG 1" readonly>
+    </div>
+    <div class="field-group">
+      <label for="trolleyId">Trolley ID</label>
+      <input type="text" id="trolleyId" value="ID0001" readonly>
+    </div>
+    <div class="field-group">
+      <label for="model">Model</label>
+      <input type="text" id="model" value="Bezza" readonly>
+    </div>
+    <div class="field-group">
+      <label for="glassType">Glass Type</label>
+      <input type="text" id="glassType" value="Front L/R" readonly>
+    </div>
+    <div class="field-group">
+      <label for="qty">Qty</label>
+      <input type="text" id="qty" value="40" readonly>
+    </div>
+  </div>
+
+</body>
+</html>
