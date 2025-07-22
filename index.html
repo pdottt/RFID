@@ -3,25 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RFID Parameters Reader</title>
+  <title>RFID Parameters Reader | OFFSQUARE</title>
+  <meta name="description" content="Real-time RFID data viewer for trolley tracking including location, model, and glass type.">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Inter, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #EEEEEE;
     }
 
-       header {
-      padding: 20px 280px;
-      margin-bottom: 29px;
-      text-align: left;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px 30px;
+      max-width: 640px;
+      margin: 0 auto 30px auto;
     }
 
     .header-left {
       display: flex;
       flex-direction: column;
-      padding-left: 250px; 
+      gap: 10px;
     }
 
     h1 {
@@ -33,7 +45,6 @@
     }
 
     #refreshButton {
-      margin-top: 10px;
       background-color: #295DEA;
       border: 2px solid #295DEA;
       color: white;
@@ -47,13 +58,6 @@
       background-color: #1f4bb0;
     }
 
-    .logo {
-      position: absolute;
-      top: 34px;
-      right: 280px;
-      margin: 0;
-    }
-
     .logo img {
       height: 73px;
       width: 110px;
@@ -61,7 +65,7 @@
 
     .container {
       max-width: 640px;
-      margin: 20px auto;
+      margin: 0 auto 30px auto;
       background-color: white;
       border-radius: 6px;
       padding: 25px 30px 35px 30px;
@@ -72,7 +76,6 @@
       margin-bottom: 30px;
       margin-left: 50px;
       margin-right: 50px;
-      
     }
 
     label {
@@ -92,26 +95,14 @@
       background-color: #FFFFFF;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) 
-    {
+    @media (max-width: 768px) {
       header {
         flex-direction: column;
-        padding: 20px;
         align-items: flex-start;
       }
 
-      .header-left {
-        padding-left: 0;
-      }
-
-      .logo {
-        position: static;
-        margin-top: 10px;
-        align-self: flex-end;
-      }
-
       .logo img {
+        margin-top: 15px;
         width: 90px;
         height: auto;
       }
@@ -123,6 +114,16 @@
       .container {
         width: 90%;
         padding: 20px;
+      }
+
+      .field-group {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      h1 {
+        font-size: 16px;
+        line-height: 28px;
       }
     }
   </style>
