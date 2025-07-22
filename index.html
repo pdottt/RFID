@@ -7,7 +7,6 @@
   <meta name="description" content="Real-time RFID data viewer for trolley tracking including location, model, and glass type.">
   <link rel="icon" type="image/png" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     * {
       box-sizing: border-box;
@@ -18,16 +17,22 @@
       margin: 0;
       padding: 0;
       background-color: #EEEEEE;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
-      padding: 20px 30px;
       max-width: 640px;
-      margin: 0 auto 30px auto;
+      width: 100%;
+      padding-top: 34px;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 30px;
     }
 
     .header-left {
@@ -37,19 +42,21 @@
     }
 
     h1 {
-      margin: 0;
-      color: #000000;
-      font-weight: 700;
+      width: 213px;
+      height: 22px;
+      color: #000;
       font-size: 18px;
       line-height: 40px;
+      font-weight: 700;
+      margin: 0;
     }
 
     #refreshButton {
+      width: 140px;
+      height: 40px;
       background-color: #295DEA;
       border: 2px solid #295DEA;
       color: white;
-      width: 140px;
-      height: 40px;
       border-radius: 6px;
       cursor: pointer;
     }
@@ -59,39 +66,41 @@
     }
 
     .logo img {
-      height: 73px;
       width: 110px;
+      height: 73px;
     }
 
     .container {
-      max-width: 640px;
-      margin: 0 auto 30px auto;
+      width: 640px;
+      min-height: 516px;
       background-color: white;
       border-radius: 6px;
-      padding: 25px 30px 35px 30px;
+      padding: 25px 50px 35px 50px;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     }
 
     .field-group {
-      margin-bottom: 30px;
-      margin-left: 50px;
-      margin-right: 50px;
+      width: 540px;
+      margin: 0 auto 30px auto;
     }
 
     label {
-      font-weight: 700;
+      width: 71px;
+      height: 15px;
       font-size: 12px;
+      font-weight: 700;
+      color: #868686;
       display: block;
       margin-bottom: 6px;
-      color: #868686;
     }
 
     input {
       width: 100%;
+      height: 40px;
       padding: 8px;
       font-size: 14px;
       border: 1px solid #B3B3B3;
-      border-radius: 5px;
+      border-radius: 6px;
       background-color: #FFFFFF;
     }
 
@@ -99,6 +108,7 @@
       header {
         flex-direction: column;
         align-items: flex-start;
+        padding: 20px;
       }
 
       .logo img {
@@ -112,13 +122,13 @@
       }
 
       .container {
-        width: 90%;
+        width: 95%;
         padding: 20px;
       }
 
       .field-group {
-        margin-left: 20px;
-        margin-right: 20px;
+        width: 100%;
+        margin: 0 0 30px 0;
       }
 
       h1 {
