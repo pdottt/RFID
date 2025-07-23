@@ -116,19 +116,25 @@
 
     @media (max-width: 768px) {
       header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
+        display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: 640px;
+      width: 95%;
+      padding-top: 34px;
+      margin-bottom: 30px;
       }
 
       .logo img {
-        margin-top: 15px;
-        width: 90px;
-        height: auto;
+       width: 110px;
+      height: 73px;
+      aspect-ratio: 110 / 73;
+      flex-shrink: 0;
       }
 
       #refreshButton {
-        width: 100%;
+        width: 140px;
       }
 
       .container {
