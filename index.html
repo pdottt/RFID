@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RFID Parameters Reader | OFFSQUARE</title>
-  <meta name="description" content="Real-time RFID data viewer for trolley tracking including location, model, and glass type.">
+  <meta name="description" content="Real-time RFID data viewer for trolley tracking including location, model, and glass type." />
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
@@ -29,7 +29,7 @@
       flex-wrap: wrap;
       max-width: 640px;
       width: 100%;
-      padding: 34px 0 0 0;
+      padding-top: 34px;
       margin-bottom: 30px;
     }
 
@@ -46,8 +46,7 @@
       font-weight: 700;
       font-size: 18px;
       line-height: 22px;
-      letter-spacing: 0;
-      color: #000;
+      color: #000000;
       margin: 0;
     }
 
@@ -62,7 +61,6 @@
       font-size: 14px;
       font-weight: 600;
       cursor: pointer;
-      flex-shrink: 0;
       aspect-ratio: 140 / 40;
       transition: all 0.3s ease;
     }
@@ -81,47 +79,39 @@
 
     .container {
       width: 640px;
-      height: 516px;
-      padding: 6px;
+      min-height: 516px;
+      padding: 25px 50px 35px 50px;
       border-radius: 6px;
       background-color: #FFFFFF;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      margin: 30px auto;
+      margin-bottom: 30px;
     }
 
     .field-group {
-      width: 540px;
-      height: 40px;
-      padding: 6px;
-      border: 1px solid #B3B3B3;
-      border-radius: 6px;
-      margin: 0 auto 30px auto;
+      margin-bottom: 30px;
     }
 
     label {
-      width: 71px;
-      height: 15px;
+      display: block;
       font-family: 'Inter', sans-serif;
       font-size: 12px;
       font-weight: 700;
       line-height: 15px;
-      letter-spacing: 0;
       color: #868686;
-      display: block;
       margin-bottom: 6px;
     }
 
     input {
-      width: 132px;
-      height: 16px;
+      display: block;
+      width: 100%;
       font-family: 'Inter', sans-serif;
       font-size: 13px;
       font-weight: 400;
       line-height: 16px;
+      padding: 8px;
       border: 1px solid #B3B3B3;
       border-radius: 6px;
       background-color: #FFFFFF;
-      padding: 8px;
     }
 
     @media (max-width: 768px) {
@@ -143,13 +133,7 @@
 
       .container {
         width: 95%;
-        height: auto;
         padding: 20px;
-      }
-
-      .field-group {
-        width: 100%;
-        padding: 6px;
       }
 
       h1 {
@@ -159,7 +143,6 @@
 
       input {
         width: 100%;
-        height: auto;
       }
     }
   </style>
@@ -172,34 +155,34 @@
       <button id="refreshButton" onclick="location.reload();">Refresh</button>
     </div>
     <div class="logo">
-      <img src="OFFSQ_Logo.png" alt="OFFSQUARE Logo">
+      <img src="OFFSQ_Logo.png" alt="OFFSQUARE Logo" />
     </div>
   </header>
 
   <div class="container">
     <div class="field-group">
       <label for="timestamp">Time Stamp</label>
-      <input type="text" id="timestamp" value="2025-07-07 12:00:00" readonly>
+      <input type="text" id="timestamp" value="2025-07-07 12:00:00" readonly />
     </div>
     <div class="field-group">
       <label for="location">Location</label>
-      <input type="text" id="location" value="QG 1" readonly>
+      <input type="text" id="location" value="QG 1" readonly />
     </div>
     <div class="field-group">
       <label for="trolleyId">Trolley ID</label>
-      <input type="text" id="trolleyId" value="ID0001" readonly>
+      <input type="text" id="trolleyId" value="ID0001" readonly />
     </div>
     <div class="field-group">
       <label for="model">Model</label>
-      <input type="text" id="model" value="Bezza" readonly>
+      <input type="text" id="model" value="Bezza" readonly />
     </div>
     <div class="field-group">
       <label for="glassType">Glass Type</label>
-      <input type="text" id="glassType" value="Front L/R" readonly>
+      <input type="text" id="glassType" value="Front L/R" readonly />
     </div>
     <div class="field-group">
       <label for="qty">Qty</label>
-      <input type="text" id="qty" value="40" readonly>
+      <input type="text" id="qty" value="40" readonly />
     </div>
   </div>
 
