@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RFID Parameters Reader | OFFSQUARE</title>
   <meta name="description" content="Real-time RFID data viewer for trolley tracking including location, model, and glass type." />
+  <link rel="icon" type="image/png" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -26,23 +27,26 @@
       justify-content: space-between;
       align-items: flex-start;
       flex-wrap: wrap;
+      max-width: 640px;
       width: 100%;
-      max-width: 700px;
-      padding: 30px 20px 0 20px;
+      padding-top: 34px;
+      margin-bottom: 30px;
     }
 
     .header-left {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      flex: 1;
     }
 
     h1 {
-      font-size: 18px;
+      width: 213px;
+      height: 22px;
+      font-family: 'Inter', sans-serif;
       font-weight: 700;
+      font-size: 18px;
       line-height: 22px;
-      color: #000;
+      color: #000000;
       margin: 0;
     }
 
@@ -50,13 +54,14 @@
       width: 140px;
       height: 40px;
       padding: 6px;
-      background-color: #295DEA;
       border: 2px solid #295DEA;
       border-radius: 6px;
+      background-color: #295DEA;
       color: white;
       font-size: 14px;
       font-weight: 600;
       cursor: pointer;
+      aspect-ratio: 140 / 40;
       transition: all 0.3s ease;
     }
 
@@ -67,19 +72,19 @@
 
     .logo img {
       width: 110px;
-      height: auto;
+      height: 73px;
       aspect-ratio: 110 / 73;
       flex-shrink: 0;
     }
 
     .container {
-      width: 100%;
-      max-width: 700px;
-      background-color: #fff;
+      width: 640px;
+      min-height: 516px;
+      padding: 25px 50px 35px 50px;
       border-radius: 6px;
+      background-color: #FFFFFF;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      padding: 25px 20px 40px 20px;
-      margin: 30px 0;
+      margin-bottom: 30px;
     }
 
     .field-group {
@@ -88,6 +93,7 @@
 
     label {
       display: block;
+      font-family: 'Inter', sans-serif;
       font-size: 12px;
       font-weight: 700;
       line-height: 15px;
@@ -96,7 +102,9 @@
     }
 
     input {
+      display: block;
       width: 100%;
+      font-family: 'Inter', sans-serif;
       font-size: 13px;
       font-weight: 400;
       line-height: 16px;
@@ -110,34 +118,31 @@
       header {
         flex-direction: column;
         align-items: flex-start;
+        padding: 20px;
       }
 
       .logo img {
         margin-top: 15px;
         width: 90px;
+        height: auto;
       }
 
       #refreshButton {
         width: 100%;
-        margin-top: 10px;
+      }
+
+      .container {
+        width: 95%;
+        padding: 20px;
       }
 
       h1 {
         font-size: 16px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 20px;
+        line-height: 22px;
       }
 
       input {
-        font-size: 12px;
-      }
-
-      label {
-        font-size: 11px;
+        width: 100%;
       }
     }
   </style>
